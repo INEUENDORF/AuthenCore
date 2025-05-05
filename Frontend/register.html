@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AuthenCore - Registro</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+  <img src="./assets/img/AuthenCore.png" alt="AuthenCore" style="max-width: 150px; display: block; margin: 0 auto 1rem;">
+    <h1>Crear Identidad Digital</h1>
+    <form id="registerForm" enctype="multipart/form-data">
+      <input type="text" name="id" placeholder="ID (ej: AUTH-XXXX-XXXX)" required>
+      <input type="text" name="fullName" placeholder="Nombre completo" required>
+      <input type="date" name="birthdate" required>
+      <textarea name="bio" placeholder="Biografía / descripción"></textarea>
+      <input type="password" name="password" placeholder="Contraseña" required>
+      
+      <label><input type="checkbox" id="isProfessional"> Soy profesional</label>
+      <input type="text" name="title" id="title" placeholder="Título profesional" style="display:none">
+      <input type="text" name="license" id="license" placeholder="Matrícula / credencial" style="display:none">
+
+      <label>Foto de perfil</label>
+      <input type="file" name="photo" accept="image/*">
+
+      <label>Documento de identidad</label>
+      <input type="file" name="document" accept="application/pdf,image/*">
+
+      <label>Credencial profesional (si aplica)</label>
+      <input type="file" name="credential" accept="application/pdf,image/*">
+
+      <button type="submit">Registrarme</button>
+    </form>
+    <div id="message"></div>
+  </div>
+
+  <script src="./assets/js/register.js"></script>
+</body>
+</html>
